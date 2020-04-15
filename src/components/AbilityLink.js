@@ -1,17 +1,17 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import { useAbilityDetails } from "./useAbilityDetails"
+import { useAbilityDetails } from "../hooks/useAbilityDetails"
 
-export default function AbilityLink({ id }) {
-    const { ability, error, loading } = useAbilityDetails(id)
-    if (loading) {
-        return <p>Loading...</p>
-    }
-    if (error) {
-        return <p>{JSON.stringify(error)}</p>
-    }
+export function AbilityLink({ id }) {
+  const { ability, error, loading } = useAbilityDetails(id)
+  if (loading) {
+    return <p>Loading...</p>
+  }
+  if (error) {
+    return <p>{JSON.stringify(error)}</p>
+  }
 
-    return (
-       <Link to={`/ability/${id}`}>{ability.name}</Link>
-    )
+  return (
+    <Link to={`/ability/${id}`}>{ability.name}</Link>
+  )
 }

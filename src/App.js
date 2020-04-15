@@ -4,15 +4,15 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import SideBar from "./components/SideBar"
-import Home from "./components/Home"
-import Pokemons from "./components/Pokemons"
-import PokemonDetails from "./components/PokemonDetails"
-import Abilities from "./components/Abilities"
-import AbilityDetails from "./components/AbilityDetails"
-import Types from "./components/Types"
-import TypeDetails from "./components/TypeDetails"
-import FavoritePokemons from "./components/FavoritePokemons"
+import { SideBar } from "./components/SideBar"
+import { Home } from "./components/Home"
+import { Pokemons } from "./components/Pokemons"
+import { PokemonDetails } from "./components/PokemonDetails"
+import { Abilities } from "./components/Abilities"
+import { AbilityDetails } from "./components/AbilityDetails"
+import { Types } from "./components/Types"
+import { TypeDetails } from "./components/TypeDetails"
+import { FavoritePokemons } from "./components/FavoritePokemons"
 import { FavoritesProvider } from './components/favorites';
 
 export function App() {
