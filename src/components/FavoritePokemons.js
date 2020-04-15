@@ -8,10 +8,7 @@ export function FavoritePokemons() {
   return (
     <div className="page grid-container">
       {favorites.map(pokemon =>
-        <>
-          <PokemonLink key={pokemon} id={pokemon} />
-          <br />
-        </>
+        <PokemonLink key={pokemon} id={pokemon} />
       )}
     </div>
   )

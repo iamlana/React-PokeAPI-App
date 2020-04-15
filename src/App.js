@@ -14,6 +14,7 @@ import { Types } from "./components/Types"
 import { TypeDetails } from "./components/TypeDetails"
 import { FavoritePokemons } from "./components/FavoritePokemons"
 import { FavoritesProvider } from './components/favorites';
+import { CookieNotification } from './components/CookieNotification';
 
 export function App() {
   return (
@@ -31,6 +32,7 @@ export function App() {
             <Route path="/ability/:id" component={AbilityDetails} />
             <Route path="/type/:id" component={TypeDetails} />
           </Switch>
+          <CookieNotification />
         </div>
       </Router>
     </FavoritesProvider>
