@@ -12,7 +12,7 @@ export default function PokemonLink({ id }) {
     }
 
     return (
-        <div className="grid-container Card-info">
+        <div className="Card-info">
             <Link className="page" to={`/pokemon/${id}`}>
                 <h3 >{pokemon.name}</h3>
                 <div>

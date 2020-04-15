@@ -4,7 +4,6 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { CookiesProvider } from 'react-cookie';
 import SideBar from "./components/SideBar"
 import Home from "./components/Home"
 import Pokemons from "./components/Pokemons"
@@ -15,6 +14,7 @@ import Types from "./components/Types"
 import TypeDetails from "./components/TypeDetails"
 import FavoritePokemons from "./components/FavoritePokemons"
 import { FavoritesProvider } from './components/favorites';
+
 
 
 function App() {

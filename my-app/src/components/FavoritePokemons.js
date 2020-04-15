@@ -1,14 +1,13 @@
 import React from "react"
 import { useFavorites } from "./favorites"
 import PokemonLink from "./PokemonLink"
-import { Link } from "react-router-dom"
 
 export default function FavoritePokemons() {
     const { favorites } = useFavorites()
 
     return (
         <>
-        <div className="page grid-container">
+        <div className="page">
             {favorites.map(pokemon =>
                 <>
                     <PokemonLink key={pokemon} id={pokemon} />
@@ -19,11 +18,3 @@ export default function FavoritePokemons() {
         </>
     )
 }
-
-
-
-
-
-        //     <div className="page">
-        //     {favorites.map(pokemon => <p key={pokemon}>{pokemon}</p>)}
-        // </div>
