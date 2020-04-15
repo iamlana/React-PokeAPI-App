@@ -2,6 +2,9 @@ import React from "react"
 
 export function Home() {
   return (
-    <h1>Home</h1>
+    <div className="page">
+      <h1>Home</h1>
+      <p>Open the sidebar to view all the links!</p>
+    </div>
   )
 }
