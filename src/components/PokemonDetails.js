@@ -31,21 +31,23 @@ export function PokemonDetails({ match }) {
       </div>
       <div className="page">
         <p>Abilities:</p>
-        <p key={pokemon.name}>{pokemon.abilities.map(ability => (
-          <>
-            <AbilityLink key={ability.name} id={ability.ability.name} />
-            <br />
-          </>
-        ))}
-        </p>
+        <div>
+          {pokemon.abilities.map(ability => (
+            <React.Fragment key={ability.ability.name}>
+              <AbilityLink id={ability.ability.name} />
+              <br />
+            </React.Fragment>
+          ))}
+        </div>
         <p>Type:</p>
-        <p key={pokemon.name}>{pokemon.types.map(type => (
-          <>
-            <TypeLink key={type.name} id={type.type.name} />
-            <br />
-          </>
-        ))}
-        </p>
+        <div>
+          {pokemon.types.map(type => (
+            <React.Fragment key={type.type.name}>
+              <TypeLink id={type.type.name} />
+              <br />
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </>
   )
