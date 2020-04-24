@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
+  Route
 } from "react-router-dom";
 import { SideBar } from "./components/SideBar"
 import { Home } from "./components/Home"
@@ -15,13 +15,15 @@ import { TypeDetails } from "./components/TypeDetails"
 import { FavoritePokemons } from "./components/FavoritePokemons"
 import { FavoritesProvider } from './components/favorites';
 import { CookieNotification } from './components/CookieNotification';
+import { DarkMode, ModeProvider } from './components/DarkMode';
 
 export function App() {
   return (
-    <FavoritesProvider>
-      <Router>
-        <div className="App">
+      <FavoritesProvider>
+        <ModeProvider>
+        <Router>
           <SideBar />
+          <DarkMode />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/pokemon" exact component={Pokemons} />
@@ -33,8 +35,8 @@ export function App() {
             <Route path="/type/:id" component={TypeDetails} />
           </Switch>
           <CookieNotification />
-        </div>
-      </Router>
-    </FavoritesProvider>
+        </Router>
+        </ModeProvider>
+      </FavoritesProvider>
   );
 }
