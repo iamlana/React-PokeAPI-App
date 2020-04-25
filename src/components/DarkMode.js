@@ -6,8 +6,8 @@ function setInitialMode(darkMode) {
 }
 
 function getInitialMode() {
-  const savedMode = JSON.parse(localStorage.getItem('dark'))
-  return savedMode || false
+  const savedMode = localStorage.getItem('dark')
+  return JSON.parse(savedMode) || false
 }
 
 const ModeContext = createContext()
@@ -16,6 +16,11 @@ export function ModeProvider({ children }) {
   const [darkMode, setDarkMode] = useState(getInitialMode)
   useEffect(() => {
     setInitialMode(darkMode)
+    if (darkMode) {
+      document.body.classList.add('dark-mode')
+    } else {
+      document.body.classList.remove('dark-mode')
+    }
   }, [darkMode])
 
   return (
@@ -25,34 +30,22 @@ export function ModeProvider({ children }) {
   )
 }
 
+export function setUpDarkMode() {
+  if (getInitialMode()) {
+    document.body.classList.add('dark-mode')
+  }
+}
+
 
 export function DarkMode() {
   const { darkMode, setDarkMode } = useContext(ModeContext)
 
-  function addDarkMode() {
-    setDarkMode(true)
-    document.body.classList.add('dark-mode')
-  }
-
-  function removeDarkMode() {
-    setDarkMode(false)
-    document.body.classList.remove('dark-mode')
-
-  }
-  function toggleMode() {
-    if (!darkMode) {
-      addDarkMode()
-    } else {
-      removeDarkMode()
-    }
-  }
-
   return (
     <>
-      <button
-        onClick={() => toggleMode()}>
-        {darkMode ? "🌞" : "🌓"}
-      </button>
+      <div style={{ position: "absolute", top: 0, right: 0 }}
+        onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? <button>Light Mode ☼</button> : <button>Dark Mode ☾</button>}
+      </div>
     </>
   )
 }
