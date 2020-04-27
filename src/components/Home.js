@@ -7,21 +7,18 @@ export function Home() {
   const hasMovedCursor = typeof x === "number" && typeof y === "number";
   const colorX = "#" + `${x}`
   const colorY = "#" + `${y}`
-function backGroundVGrad(){
-  document.body.style.backgroundImage = "linear-gradient(" + colorX + "," + colorY + ")"
-}//style={{ backgroundImage: "linear-gradient(" + colorX + "," + colorY + ")" }}
+  function backGroundGradient() {
+    document.body.style.backgroundImage = "linear-gradient(" + colorX + "," + colorY + ")"
+  }
 
-
-// {hasMovedCursor
-//   ? `Your cursor is at ${x}, ${y}.`
-//   : "Move your mouse around."}
   return (
     <div className="page">
+      <button onClick={backGroundGradient()}></button>
       <h1>Home</h1>
       <p>Open the sidebar to view all the links!</p>
       <p>
         {hasMovedCursor
-          ? backGroundVGrad()
+          ? backGroundGradient()
           : "Move your mouse around."}
       </p>
     </div>
