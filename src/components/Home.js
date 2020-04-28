@@ -8,12 +8,11 @@ export function Home() {
   const colorX = "#" + `${x}`
   const colorY = "#" + `${y}`
   function backGroundGradient() {
-    document.body.style.backgroundImage = "linear-gradient(" + colorX + "," + colorY + ")"
+     document.body.style.backgroundImage = "linear-gradient(" + colorX + "," + colorY + ")"
   }
 
   return (
     <div className="page">
-      <button onClick={backGroundGradient()}></button>
       <h1>Home</h1>
       <p>Open the sidebar to view all the links!</p>
       <p>
