@@ -1,16 +1,19 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useContext } from "react"
 import { useMousePosition } from "../hooks/useMousePosition"
+import { ModeContext } from './DarkMode'
 
 export function Home() {
   const { x, y } = useMousePosition();
+  const { darkMode } = useContext(ModeContext)
 
   useEffect(() => {
     const hue = Math.round(x / window.innerWidth * 360)
-    const saturation = Math.round(y / window.innerHeight * 100)
-    const lightness = '50'
+    const yr = y / window.innerHeight * 2 * Math.PI
+    const saturation = Math.round((Math.sin(yr) + 1) * 50)
+    const lightness = darkMode ? '10' : '70'
     const color = `hsl(${hue}, ${saturation}%, ${lightness}%)`
     document.body.style.backgroundColor = color;
-  }, [x, y])
+  }, [x, y, darkMode])
 
   useEffect(() => {
     return () => {

@@ -10,7 +10,7 @@ function getInitialMode() {
   return JSON.parse(savedMode) || false
 }
 
-const ModeContext = createContext()
+export const ModeContext = createContext()
 
 export function ModeProvider({ children }) {
   const [darkMode, setDarkMode] = useState(getInitialMode)
