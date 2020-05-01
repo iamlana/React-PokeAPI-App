@@ -7,10 +7,9 @@ export function useMousePosition() {
   const changeMousePosition = event => {
     setMousePosition({ x: event.clientX, y: event.clientY })
   }
-  console.log(mousePosition)
+
   useEffect(() => {
     window.document.addEventListener("mousemove", changeMousePosition);
-
     return () => window.document.removeEventListener("mousemove", changeMousePosition);
   }, []);
 
