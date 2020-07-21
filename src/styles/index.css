@@ -1,7 +1,7 @@
 @import "./cookie-notification.css";
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,12 +11,16 @@ body {
   background-color: white;
 }
 
+
 .page {
   padding: 40px;
   text-align: center;
   margin: 0 auto;
 }
-
+.pokemon_info{
+  text-align: center;
+  margin: 0 auto;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -130,13 +134,10 @@ a {
   color: #251c48
 }
 
-a:hover {
-  color: rgba(255, 255, 255, 0.927)
-}
-
 .Card-info {
   background-color: #6bbaa789;
   border-radius: 10px;
+  text-align: center;
 }
 
 .Card-info:hover {
@@ -188,3 +189,4 @@ a:hover {
 background-color: transparent;
 color: #6BBAA7;
 }
+

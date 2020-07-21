@@ -12,8 +12,8 @@ export function PokemonLink({ id }) {
   }
 
   return (
-    <div className="grid-container Card-info">
-      <Link className="page" to={`/pokemon/${id}`}>
+    <div className="grid-container Card-info pokemon_info">
+      <Link to={`/pokemon/${id}`}>
         <h3 >{pokemon.name}</h3>
         <div>
           <img

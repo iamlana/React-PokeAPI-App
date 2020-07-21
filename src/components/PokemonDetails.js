@@ -17,7 +17,7 @@ export function PokemonDetails({ match }) {
   }
   return (
     <>
-      <div className="page">
+      <div className='pokemon_info' >
         <Link to={'/pokemon'}><button >&#8592;All Pokémons</button></Link>
         <button className="favorite" title="Add to favorite" onClick={() => toggleFavorite(id)}>
           {favorites.includes(id) ? <span>&#9733;</span> : <span>&#9734;</span>}
@@ -29,7 +29,7 @@ export function PokemonDetails({ match }) {
         <p>Height: {pokemon.height}</p>
         <p>Weight: {pokemon.weight}</p>
       </div>
-      <div className="page">
+      <div className='pokemon_info' >
         <p>Abilities:</p>
         <div>
           {pokemon.abilities.map(ability => (

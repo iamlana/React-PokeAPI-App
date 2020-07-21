@@ -14,8 +14,8 @@ export function TypeDetails({ match }) {
   }
 
   return (
-    <div className="page">
-      <Link to={'/type'}><button >&#8592;All Types</button></Link>
+    <div>
+      <Link className='pokemon_info' to={'/type'}><button >&#8592;All Types</button></Link>
       <h1 key={type.name}>{type.name}</h1>
       <h3>All Pokémons who can be {type.name}</h3>
       <p className="grid-container" key={type.name}>{type.pokemon.map(pokemon => (

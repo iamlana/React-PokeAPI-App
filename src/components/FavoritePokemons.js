@@ -6,7 +6,7 @@ export function FavoritePokemons() {
   const { favorites } = useFavorites()
 
   return (
-    <div className="page grid-container">
+    <div className="pokemon_info grid-container">
       {favorites.map(pokemon =>
         <PokemonLink key={pokemon} id={pokemon} />
       )}
