@@ -42,10 +42,10 @@ export function DarkMode() {
 
   return (
     <>
-      <div style={{ position: "absolute", top: 0, right: 0 }}
+      <button className="mode-button"
         onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? <button>Light Mode ☼</button> : <button>Dark Mode ☾</button>}
-      </div>
+        {darkMode ? "Light Mode ☼" : "Dark Mode ☾"}
+      </button>
     </>
   )
 }

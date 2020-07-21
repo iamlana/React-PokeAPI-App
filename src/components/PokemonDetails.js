@@ -20,7 +20,7 @@ export function PokemonDetails({ match }) {
       <div className="page">
         <Link to={'/pokemon'}><button >&#8592;All Pokémons</button></Link>
         <button className="favorite" title="Add to favorite" onClick={() => toggleFavorite(id)}>
-          {favorites.includes(id) ? '♥' : '♡'}
+          {favorites.includes(id) ? <span>&#9733;</span> : <span>&#9734;</span>}
         </button>
         <h1 key={pokemon.name}>{pokemon.name}</h1>
         <div>

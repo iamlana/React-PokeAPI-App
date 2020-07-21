@@ -7,11 +7,7 @@ export function Home() {
   const { darkMode } = useContext(ModeContext)
 
   useEffect(() => {
-    const hue = Math.round(x / window.innerWidth * 360)
-    const yr = y / window.innerHeight * 2 * Math.PI
-    const saturation = Math.round((Math.sin(yr) + 1) * 50)
-    const lightness = darkMode ? '10' : '70'
-    const color = `hsl(${hue}, ${saturation}%, ${lightness}%)`
+    const color = darkMode ? "rgb(57,57,74)" : "#B6A19E";
     document.body.style.backgroundColor = color;
   }, [x, y, darkMode])
 
@@ -23,9 +19,7 @@ export function Home() {
 
   return (
     <div className="page">
-      <h1>Home</h1>
-      <p>Open the sidebar to view all the links!</p>
-      <p>Move your mouse around.</p>
+      <h1>Open the sidebar to view all the links!</h1>
     </div>
   )
 }

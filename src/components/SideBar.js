@@ -30,7 +30,7 @@ function SideBarNav({ open, onClick }) {
           <Link to="/type" className="nav-links">Types</Link>
         </li>
         <li>
-          <Link to="/favorite_pokemons" className="nav-links">Favorite &hearts;</Link>
+          <Link to="/favorite_pokemons" className="nav-links">Favorite &#9733; </Link>
         </li>
       </ul>
     </nav>
