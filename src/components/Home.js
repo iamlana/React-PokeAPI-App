@@ -7,7 +7,7 @@ export function Home() {
   const { darkMode } = useContext(ModeContext)
 
   useEffect(() => {
-    const color = darkMode ? "rgb(57,57,74)" : "#B6A19E";
+    const color = darkMode ? "rgb(57,57,74)" : "white";
     document.body.style.backgroundColor = color;
   }, [x, y, darkMode])
 
