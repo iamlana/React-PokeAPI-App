@@ -182,3 +182,8 @@ a:hover {
   color: rgb(57, 57, 74);
   border-radius: 10px;
 }
+
+.dark-mode .favorite{
+background-color: transparent;
+color: #6BBAA7;
+}

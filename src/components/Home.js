@@ -19,7 +19,8 @@ export function Home() {
 
   return (
     <div className="page">
-      <h1>Open the sidebar to view all the links!</h1>
+      <h3>Open the sidebar to view all the links!</h3>
+      <p>The page displays basic information about Pokemon and their abilities.</p>
     </div>
   )
 }
