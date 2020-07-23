@@ -12,12 +12,7 @@ body {
 }
 
 
-.page {
-  padding: 40px;
-  text-align: center;
-  margin: 0 auto;
-}
-.pokemon_info{
+.pokemon_info, h1, h3{
   text-align: center;
   margin: 0 auto;
 }
@@ -190,3 +185,8 @@ background-color: transparent;
 color: #6BBAA7;
 }
 
+.page {
+  padding: 45px;
+  text-align: center;
+  margin: 0 auto;
+}
